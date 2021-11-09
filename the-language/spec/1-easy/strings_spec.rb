@@ -54,7 +54,11 @@ Humpty dumpty had a great fall
 
     expect(string.length).to eq(62)
     expect(string.lines.count).to eq(2)
+
     expect(string[0, 1]).to eq('H')
+
+    expect(string[0, 1]).to eq("H")
+
   end
 
   it 'can be concatenated with the +' do
@@ -66,6 +70,8 @@ Humpty dumpty had a great fall
     greeting = 'Hello, '
     subject  = 'World!'
     string = greeting + subject
+    rob = string
+    rob = 1
 
     expect(string).to eq('Hello, World!')
     expect(greeting).to eq('Hello, ')
@@ -128,6 +134,12 @@ Humpty dumpty had a great fall
   it 'can extract a single character' do
     string = 'Bacon, lettuce and tomato'
     expect(string[1]).to eq("a")
+  end
+
+  it 'can split a string into individual characters' do
+    string = 'Bacon, lettuce and tomato'
+
+    expect(string.chars).to eq(__)
   end
 
   it 'represents single characters as strings' do
