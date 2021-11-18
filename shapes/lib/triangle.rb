@@ -6,7 +6,6 @@ def triangle(a, b, c)
   return :scalene if a != b && b != c && a != c
 end
 
-
 # Error class used in invalid_triangle_spec. No need to change this code.
 class TriangleError < StandardError
 end
