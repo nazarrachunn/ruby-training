@@ -1,17 +1,16 @@
 # frozen_string_literal: true
 
 def quadrilateral(a, b, c, d)
-
-  if (a == b) && (b == c) && (c == d)
+  elements = [a, b, c, d]
+  if (elements.include? 0) || (elements.sum != 360)
+    raise QuadrilateralError
+  elsif (a == b) && (b == c) && (c == d)
     [:square, :rectangle]
   elsif ((a == b) && (c == d)) || ((a == c) && (b == d)) || ((a == d) && (b == c))
     [:parallelogram, :rhombus]
   else
     [:quadrilateral]
   end
-
-
-  
 end
   
 
