@@ -2,7 +2,10 @@
 
 def quadrilateral(a, b, c, d)
   elements = [a, b, c, d]
-  if (elements.include? 0) || (elements.sum != 360)
+  sum = (a+b+c+d)
+  if (elements.include? 0) || (elements.sum != 360) 
+    raise QuadrilateralError
+  elsif (a < 0) || (b < 0) || (c < 0 ) || (d < 0)
     raise QuadrilateralError
   elsif (a == b) && (b == c) && (c == d)
     [:square, :rectangle]
