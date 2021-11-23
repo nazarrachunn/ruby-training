@@ -25,6 +25,7 @@ def triangle(a, b, c)
   if (a != b) && (b != c) && (a != c)
     return :scalene
   end
+
 end
 
 # Error class used in invald_triangle_spec. No need to change this code.
