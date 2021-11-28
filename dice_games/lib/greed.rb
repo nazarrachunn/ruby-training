@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Greed
-  raise GreedError
+    def score
+  raise GreedError 
   end
 end
 
