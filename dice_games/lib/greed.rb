@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class Greed
-    def score
+    def score()
   raise GreedError 
-  end
+    end
 end
-
 
 class GreedError < StandardError
 end
