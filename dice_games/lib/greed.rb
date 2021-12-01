@@ -2,13 +2,19 @@
 
 class Greed
     def score(number = [])
-        score = 0
+      if number == []
+      raise GreedError
+      end
+      total = 0
+      number.uniq.each do |item|
+        if item == 1
+          return 100
+        elsif item == 5
+          return 50
+        end
     end
-
+  end
 end
-
-
-
 
 class GreedError < StandardError
 end
