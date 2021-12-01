@@ -21,7 +21,8 @@ class Greed
         return 50
       elsif number.count(6)/3 == 1
         return 600
-      
+      elsif number.include?(1&&1&&5&&5)
+        return 300
       end
       total = 0
     end
