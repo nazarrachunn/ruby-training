@@ -11,6 +11,10 @@ class Greed
         return 1000
       elsif number.include?(1)
         return 100
+      elsif number.count(2)/3 == 1
+        return 200
+      elsif number.count(3)/3 == 1
+        return 300
       end
       total = 0
     end
