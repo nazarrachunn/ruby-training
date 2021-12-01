@@ -5,16 +5,23 @@ class Greed
       if number == nil
       raise GreedError
       end
-      if number.include?(5)
-        return 50
+      if number.count(5)/3 == 1 
+        return 500 
       elsif number.count(1)/3 == 1
         return 1000
-      elsif number.include?(1)
+      elsif number.count(1)/1 == 1
         return 100
       elsif number.count(2)/3 == 1
         return 200
       elsif number.count(3)/3 == 1
         return 300
+      elsif number.count(4)/3 == 1
+        return 400
+      elsif number.count(5)/1 == 1
+        return 50
+      elsif number.count(6)/3 == 1
+        return 600
+      
       end
       total = 0
     end
