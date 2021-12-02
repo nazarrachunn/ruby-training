@@ -5,11 +5,11 @@ class Greed
       if number == nil
       raise GreedError
       end
-      if number.count(5)/3 == 1 
+          if number.count(5)/3 == 1 
         return 500 
       elsif number.count(1)*3 == 9
         return 1000
-      elsif number.count(1)/1 == 1
+      elsif number.count(1)-1 == 0
         return 100
       elsif number.count(2)/3 == 1
         return 200
