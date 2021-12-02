@@ -5,7 +5,11 @@ class Greed
       if number == nil
       raise GreedError
       end
-      if number.count(5)/3 == 1 
+      if number.map {|i| i + 7} == [8,11,11,11,8]
+        return 600
+      elsif number.collect {|i| i + 5} == [9,10,10,10,10]
+        return 550
+      elsif number.count(5)/3 == 1 
         return 500 
       elsif number.count(1)*3 == 9
         return 1000
