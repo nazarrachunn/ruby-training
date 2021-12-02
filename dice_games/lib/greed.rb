@@ -5,6 +5,7 @@ class Greed
       if number == nil
       raise GreedError
       end
+
           if number.count(5)/3 == 1 
         return 500 
       elsif number.count(1)*3 == 9
@@ -25,10 +26,9 @@ class Greed
         return 300
       elsif number.count(1)/5 == 1
         return 1200
-      end
-      total = 0
+      end  
+      total_score = 0
     end
 end
-
 class GreedError < StandardError
 end
