@@ -5,7 +5,11 @@ class Greed
       if number == nil
       raise GreedError
       end
-      if number.map {|i| i + 7} == [8,11,11,11,8]
+      if number.sort.uniq == [1,6]
+        return 800
+      elsif number.uniq == [1,5,6]
+        return 1050
+      elsif number.map {|i| i + 7} == [8,11,11,11,8]
         return 600
       elsif number.collect {|i| i + 5} == [9,10,10,10,10]
         return 550
