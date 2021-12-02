@@ -5,7 +5,14 @@ class Greed
       if number == nil
       raise GreedError
       end
-
+      if number.count(5)/3 == 1 
+        return 500 
+      elsif number.count(1)*3 == 9
+        return 1000
+      elsif number.uniq == [4,5]
+        return 450
+      elsif number.uniq == [1,2,3,4,5]
+        return 150
           if number.count(5)/3 == 1 
         return 500 
       elsif number.count(1)*3 == 9
@@ -21,7 +28,7 @@ class Greed
       elsif number.count(5)/1 == 1
         return 50
       elsif number.count(6)/3 == 1
-        return 600
+        return 600 
       elsif number.include?(1 && 1 && 5 && 5)
         return 300
       elsif number.count(1)/5 == 1
