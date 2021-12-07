@@ -45,6 +45,5 @@ class Greed
       total_score = 0 
     end
   end
-#
 class GreedError < StandardError
 end
