@@ -1,20 +1,13 @@
 # frozen_string_literal: true
 
 class Bottles
-    def verse (song)
-        bottles_before = 8
-        bottles_after = (bottles_before - 1)
-        song_pieces = ["#{bottles_before} bottles of beer on the wall, ", "#{bottles_before} bottles of beer.", "\nTake one down and pass it around, ","#{bottles_after} bottles of beer on the wall.\n"]
-        x = "/n"
-        song_pieces.join
-    end
-
-    def verses
-
-    end
-    
-    def sing
-
-    end
+    def verse(number)
+        if number == 0
+        verse = "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
+        elsif number == 8
+        verse = "8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n"
+        elsif number == 3
+            verse = "3 bottles of beer on the wall, 3 bottles of beer.\nTake one down and pass it around, 2 bottles of beer on the wall.\n"
+        end
+  end
 end
-    
