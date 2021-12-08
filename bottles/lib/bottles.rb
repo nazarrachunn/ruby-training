@@ -2,7 +2,7 @@
 
 class Bottles
     def verse(number)
-        "#{quantity(number)} #{check_multiple(number)} of beer on the wall, " +
+        "#{quantity(number).capitalize} #{check_multiple(number)} of beer on the wall, " +
         "#{quantity(number)} #{check_multiple(number)} of beer.\n" +
         "#{store(number)}, " +
         "#{quantity(min_or_max(number))} #{check_multiple(min_or_max(number))} of beer on the wall.\n"
