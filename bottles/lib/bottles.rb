@@ -2,7 +2,7 @@
 
 class Bottles
     def verse(number)
-        "#{quantity(number)} #{check_multiple(number)} of beer on the wall, " +
+        "#{quantity(number).capitalize} #{check_multiple(number)} of beer on the wall, " +
         "#{quantity(number)} #{check_multiple(number)} of beer.\n" +
         "#{store(number)}, " +
         "#{quantity(min_or_max(number))} #{check_multiple(min_or_max(number))} of beer on the wall.\n"
@@ -44,4 +44,13 @@ class Bottles
             number - 1
         end
     end
+
+    def sing
+        verses(99, 0)
+    end
+
+    def verses(start, finish)
+        start.downto(finish).collect {|item| verse(item)}.join("\n") + "\n"
+    end
+        
 end
