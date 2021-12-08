@@ -44,4 +44,13 @@ class Bottles
             number - 1
         end
     end
+
+    def sing
+        verses(99, 0)
+    end
+
+    def verses(start, finish)
+        start.downto(finish).collect {|item| verse(item)}
+    end
+        
 end
