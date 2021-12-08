@@ -50,7 +50,7 @@ class Bottles
     end
 
     def verses(start, finish)
-        start.downto(finish).collect {|item| verse(item)}
+        start.downto(finish).collect {|item| verse(item)}.join("\n") + "\n"
     end
         
 end
