@@ -3,21 +3,19 @@
 require 'bundler'
 Bundler.setup
 
-require 'ca_testing/drivers'
+require 'automation_helpers/drivers/local'
 require 'capybara'
 require 'capybara/dsl'
 require 'site_prism'
 require 'selenium-webdriver'
 require 'webdrivers'
-require 'rainbow/refinement'
-
 
 class Setup
   def initialize
     setup_capybara
     setup_site_prism
     setup_selenium_webdriver
-    setup_driver
+    setup_local_driver
   end
 
   def setup_capybara
@@ -43,8 +41,8 @@ class Setup
     Selenium::WebDriver.logger.level = log_level
   end
 
-  def setup_driver
-    CaTesting::Drivers::Local.new(browser).register
+  def setup_local_driver
+    AutomationHelpers::Drivers::Local.new(browser).register
   end
 
   def browser
