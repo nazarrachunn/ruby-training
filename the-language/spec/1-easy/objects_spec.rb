@@ -13,8 +13,8 @@ RSpec.describe 'objects in ruby' do
   end
 
   it 'can be inspected (as if you had done so in a console)' do
-    expect(123.inspect).to eq(__)
-    expect(nil.inspect).to eq(__)
+    expect(123.inspect).to eq("123")
+    expect(nil.inspect).to eq("nil")
   end
 
   it 'has an id' do

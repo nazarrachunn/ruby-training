@@ -72,9 +72,9 @@ Humpty dumpty had a great fall
     suffix  = 'World!'
     greeting = prefix + suffix
 
-    expect(greeting).to eq(__)
-    expect(prefix).to eq(__)
-    expect(suffix).to eq(__)
+    expect(greeting).to eq('Hello, World!')
+    expect(prefix).to eq('Hello, ')
+    expect(suffix).to eq('World!')
   end
 
   it 'will concatenate on the end of a string using +=' do
@@ -138,13 +138,13 @@ Humpty dumpty had a great fall
   it 'can split a string into individual characters' do
     string = 'Bacon, lettuce and tomato'
 
-    expect(string.chars).to eq(__)
+    expect(string.chars).to eq(["B", "a", "c", "o", "n", ",", " ", "l", "e", "t", "t", "u", "c", "e", " ", "a", "n", "d", " ", "t", "o", "m", "a", "t", "o"])
   end
 
   it 'represents single characters as strings' do
     # Again this isn't used very often
-    expect(?a).to eq(__)
-    expect(?a == 97).to eq(__)
+    expect(?a).to eq("a")
+    expect(?a == 97).to eq(false)
   end
 
   it 'can split a string' do

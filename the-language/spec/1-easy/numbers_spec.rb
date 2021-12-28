@@ -41,8 +41,8 @@ RSpec.describe 'numbers' do
   end
 
   it 'can also try to convert garbage strings to numbers' do
-    expect('12ab34'.to_i).to eq(__)
-    expect('cd34ef'.to_f).to eq(__)
+    expect('12ab34'.to_i).to eq(12)
+    expect('cd34ef'.to_f).to eq(0)
   end
 
   it 'can list all the digits of a number' do

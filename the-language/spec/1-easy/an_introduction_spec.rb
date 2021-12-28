@@ -19,7 +19,7 @@ RSpec.describe 'an introduction to ruby' do
     end
 
     it 'allows you to fill in values' do
-      expect(1 + 1).to eq(__)
+      expect(1 + 1).to eq(2)
     end
   end
 end
