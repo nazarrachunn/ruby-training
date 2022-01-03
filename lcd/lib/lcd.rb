@@ -2,30 +2,40 @@
 
 class LCD
   def result(digit)
-    if digit == 0
-      upper_part_of_digit(digit) + middle_part_of_digit(digit) + lower_part_of_digit(digit)  
-    else expected = <<~SQUIGGLY_HEREDOC
-      _ 
-     |_|
-     |_|
-
-   SQUIGGLY_HEREDOC
-      
+    case digit
+    when 8
+      eight.values.join
+    when 0
+      zero.values.join
+    else 6
+      six.values.join
     end
   end
 
-  def upper_part_of_digit(digit) 
-        " _\n"
+  def zero
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "| |\n",
+      lower_part_of_digit: "|_| "
+    }
   end
 
-  def middle_part_of_digit(digit)
-    "|_|\n"
-end
-
-  def lower_part_of_digit(digit)
-        "|_| "
+  def six
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "|_\n",
+      lower_part_of_digit: "|_| "
+    }
   end
 
+  def eight
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "|_|\n",
+      lower_part_of_digit: "|_| "
+    }
+  end
 end
+
 lcd = LCD.new
-puts lcd.result(0)
+puts lcd.result(4)
