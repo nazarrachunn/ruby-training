@@ -2,10 +2,14 @@
 
 class LCD
   def result(digit)
-    if digit == 8
+    case digit
+    when 8
       eight.values.join
-    else
+    when 0
       zero.values.join
+    else 6
+      six.values.join
+
     end
   end
 
@@ -17,6 +21,22 @@ class LCD
     }
   end
 
+  def six
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "|_\n",
+      lower_part_of_digit: "|_| "
+    }
+  end
+
+  def eight
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "|_|\n",
+      lower_part_of_digit: "|_| "
+    }
+  end
+  
   def eight
     {
       upper_part_of_digit: " _\n",
@@ -27,4 +47,4 @@ class LCD
 end
 
 lcd = LCD.new
-puts lcd.result(0)
+puts lcd.result(4)
