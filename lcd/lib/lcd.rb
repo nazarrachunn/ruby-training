@@ -9,6 +9,7 @@ class LCD
       zero.values.join
     else 6
       six.values.join
+
     end
   end
 
@@ -28,6 +29,14 @@ class LCD
     }
   end
 
+  def eight
+    {
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "|_|\n",
+      lower_part_of_digit: "|_| "
+    }
+  end
+  
   def eight
     {
       upper_part_of_digit: " _\n",
