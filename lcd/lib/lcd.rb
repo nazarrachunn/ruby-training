@@ -53,9 +53,9 @@ class LCD
 
   def one
     {
-      upper_part_of_digit: " \n",
-      middle_part_of_digit: " |\n",
-      lower_part_of_digit: " | "
+      upper_part_of_digit: "  \n",
+      middle_part_of_digit: "  |\n",
+      lower_part_of_digit: "  |"
     }
   end
 
@@ -93,9 +93,9 @@ class LCD
 
   def seven
     {
-      upper_part_of_digit: "_\n",
-      middle_part_of_digit: " |\n",
-      lower_part_of_digit: " |"
+      upper_part_of_digit: " _\n",
+      middle_part_of_digit: "  |\n",
+      lower_part_of_digit: "  |"
     }
   end
 
@@ -109,4 +109,4 @@ class LCD
 end
 
 lcd = LCD.new
-puts lcd.result(9)
+puts lcd.result(1)
