@@ -1,112 +1,52 @@
 # frozen_string_literal: true
 
 class LCD
-  def result(digit)
-    case digit
-    when 8
-      eight.values.join
-    when 0
-      zero.values.join
-    when 6
-      six.values.join
-    when 1
-      one.values.join
-    when 2
-      two.values.join
-    when 3
-      three.values.join
-    when 4
-      four.values.join
-    when 5
-      five.values.join
-    when 7
-      seven.values.join
-    else 9
-      nine.values.join
+  attr_reader :digit, :lcd_states, :lcd_display_data
+
+  def initialize
+    @digit = digit
+    @lcd_states = %w[HORIZONTAL VERTICAL HORIZONTAL VERTICAL HORIZONTAL]
+    @lcd_display_data = {
+      0 => [1, 3, 2, 3, 1],
+      1 => [2, 5, 2, 5, 2],
+      2 => [1, 5, 1, 4, 1],
+      3 => [1, 5, 1, 5, 1],
+      4 => [2, 3, 1, 5, 2],
+      5 => [1, 4, 1, 5, 1],
+      6 => [1, 4, 1, 4, 1],
+      7 => [1, 5, 2, 5, 2],
+      8 => [1, 3, 1, 3, 1],
+      9 => [1, 3, 1, 5, 1]
+    }
+  end
+    def render(digit)
+      if digit == 1
+      lcd_display_data.values.join
+      else
+      lcd_display_data.keys.join
+      end
     end
 
-  end
+    def horizontal_segment(position)
+      case position
+      when 1
+        " " + "_"
+      when 2
+        " " + " "
+      end
+    end
 
-  def zero
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "| |\n",
-      lower_part_of_digit: "|_| "
-    }
-  end
-
-  def six
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "|_\n",
-      lower_part_of_digit: "|_| "
-    }
-  end
-
-  def eight
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "|_|\n",
-      lower_part_of_digit: "|_| "
-    }
-  end
-
-  def one
-    {
-      upper_part_of_digit: "  \n",
-      middle_part_of_digit: "  |\n",
-      lower_part_of_digit: "  |"
-    }
-  end
-
-  def two
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: " _|\n",
-      lower_part_of_digit: "|_"
-    }
-  end
-
-  def three
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: " _|\n",
-      lower_part_of_digit: " _| "
-    }
-  end
-
-  def four
-    {
-      upper_part_of_digit: " \n",
-      middle_part_of_digit: "|_|\n",
-      lower_part_of_digit: "  |"
-    }
-  end
-
-  def five
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "|_\n",
-      lower_part_of_digit: " _|"
-    }
-  end
-
-  def seven
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "  |\n",
-      lower_part_of_digit: "  |"
-    }
-  end
-
-  def nine
-    {
-      upper_part_of_digit: " _\n",
-      middle_part_of_digit: "|_|\n",
-      lower_part_of_digit: " _| "
-    }
-  end
+    def vertical_element(position)
+      case position
+      when 3
+        " " + "| |"
+      when 4
+        " " + " |"
+      when 5
+        " " + "| "
+      end
+    end
 end
 
 lcd = LCD.new
-puts lcd.result(1)
+puts lcd.render(1)
