@@ -21,12 +21,12 @@ class LCD
       "d" => ['  ', ' _|', '|_|']
     }
     array = string.split('')
-    number_of_lines = 5
+    number_of_lines = 3
 
     result = (0..number_of_lines - 1).inject("") { |final, num| final + "#{array.inject("") { |line, char| line + "#{config[char][num]}\t" }}\n" }
   end
   lcd = LCD.new
-  puts lcd.render('abc')
+  puts lcd.render('0')
   
 end
   
