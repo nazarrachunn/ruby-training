@@ -26,7 +26,7 @@ class LCD
     result = (0..number_of_lines - 1).inject("") { |final, num| final + "#{array.inject("") { |line, char| line + "#{config[char][num]}\t" }}\n" }
   end
   lcd = LCD.new
-  puts lcd.render('0')
+  puts lcd.render('0ac')
   
 end
   
