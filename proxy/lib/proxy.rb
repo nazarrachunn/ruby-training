@@ -4,6 +4,7 @@ class Proxy
   
     def initialize(proxy_object)
         @proxy_object = proxy_object
+        @messages = []
     end
 
     def method_missing(method_name, *args, &block)
@@ -19,12 +20,13 @@ class Proxy
       if proxy_method_name.include?(method_name)
         true
       else
-        super(methodd_name, include_private)
+        super(method_name, include_private)
       end
     end
 
-    def called?
-      messages.include?(method_name)
+    def called?(msg)
+      @messages.include?(msg)
     end
+
 end
 
