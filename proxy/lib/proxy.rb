@@ -28,5 +28,8 @@ class Proxy
       @messages.include?(msg)
     end
 
+    def  number_of_times_called(msg)
+      @messages.count(msg)
+    end
 end
 
