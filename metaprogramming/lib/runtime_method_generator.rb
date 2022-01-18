@@ -6,6 +6,7 @@
 # Do NOT AMEND the predefined methods. They are designed to be obtrusive!
 #
 class RuntimeMethodGenerator
+
   def predefined
     :predefined
   end
@@ -15,10 +16,10 @@ class RuntimeMethodGenerator
   end
 
   def add_a_method
-    self.class.define_method(:funky_method) do 
-      return_funky
-    end
+    self.class.define_method(:funky_method) { return_funky }
+  end
+
+  def add_custom_method(name)
+    self.class.define_method(name) { :foo }
   end
 end
-
-
