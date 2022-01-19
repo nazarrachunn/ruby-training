@@ -6,6 +6,7 @@
 # Do NOT AMEND the predefined methods. They are designed to be obtrusive!
 #
 class RuntimeMethodGenerator
+
   def predefined
     :predefined
   end
@@ -19,6 +20,6 @@ class RuntimeMethodGenerator
   end
 
   def add_custom_method(name_method)
-    self.class.define_method(name_method) { name_method.to_s }
+    self.class.define_method(name_method) { :foo }
   end
 end
