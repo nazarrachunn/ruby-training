@@ -1,5 +1,5 @@
 RSpec.describe 'numbers' do
-  it 'can be created by just typing the number' do
+  it 'can be created by typing the number' do
     integer = 42
     expect(integer.is_a?(Integer)).to eq(true)
     float = 42.1
@@ -13,11 +13,16 @@ RSpec.describe 'numbers' do
     expect(Math::PI.class).to eq(Float)
   end
 
+<<<<<<< HEAD
   it 'cannot be instantiated like other objects' do
     expect { Integer.new(42) }.to raise_error(NoMethodError)
+=======
+  it 'cannot be instantiated as if it were a regular object' do
+    expect { Integer.new(42) }.to raise_error(__)
+>>>>>>> upstream/main
   end
 
-  it 'can update the original integer by using a variety of operations' do
+  it 'can update the original integer by using a variety of operators' do
     original_number = 1
     number_to_add  = 100
     new_number = original_number + number_to_add
@@ -40,9 +45,15 @@ RSpec.describe 'numbers' do
     expect(Float('456')).to eq(456.0)
   end
 
+<<<<<<< HEAD
   it 'can also try to convert garbage strings to numbers' do
     expect('12ab34'.to_i).to eq(12)
     expect('cd34ef'.to_f).to eq(0)
+=======
+  it 'can also convert garbage strings to numbers' do
+    expect('12ab34'.to_i).to eq(__)
+    expect('cd34ef'.to_f).to eq(__)
+>>>>>>> upstream/main
   end
 
   it 'can list all the digits of a number' do

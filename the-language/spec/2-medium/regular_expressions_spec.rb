@@ -106,17 +106,29 @@ RSpec.describe 'regular expressions' do
   end
 
   it 'has special variables to access captures' do
+<<<<<<< HEAD
     expect('Name: Gray, James'[/(\w+), (\w+)/]).to eq('Gray, James')
     expect($1).to eq("Gray")
     expect($2).to eq("James")
+=======
+    expect('Name: Gary, James'[/(\w+), (\w+)/]).to eq(__)
+    expect($1).to eq(__)
+    expect($2).to eq(__)
+>>>>>>> upstream/main
   end
 
   it 'uses a | to offer alternatives for a group' do
     simpsons = /(Bart|Lisa|Maggie) Simpson/
 
+<<<<<<< HEAD
     expect('Bart Simpson'[simpsons]).to eq('Bart Simpson')
     expect('Maggie Simpson'[simpsons]).to eq('Maggie Simpson')
     expect('Montgomery Simpson'[simpsons]).to eq(nil)
+=======
+    expect('Bart Simpson'[simpsons]).to eq(__)
+    expect('Maggie Simpson'[simpsons]).to eq(__)
+    expect('Homer Simpson'[simpsons]).to eq(__)
+>>>>>>> upstream/main
   end
 
 

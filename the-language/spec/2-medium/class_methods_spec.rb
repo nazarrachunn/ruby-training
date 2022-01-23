@@ -2,13 +2,18 @@ RSpec.describe 'class methods' do
   class Cat
   end
 
-  it 'all instances are Objects' do
+  it 'all instances are objects' do
     percy = Cat.new
     expect(percy.is_a?(Object)).to eq(true)
   end
 
+<<<<<<< HEAD
   it 'all classes (constructors), are Classes' do
     expect(Cat.is_a?(Class)).to eq(true)
+=======
+  it 'all classes (constructors), are classes' do
+    expect(Cat.is_a?(Class)).to eq(__)
+>>>>>>> upstream/main
   end
 
   it 'classes are objects too' do
@@ -20,11 +25,17 @@ RSpec.describe 'class methods' do
     expect(percy.methods.size > 1).to be true
   end
 
+<<<<<<< HEAD
   it 'classes have methods' do
     expect(Cat.methods.size > 1).to be true
+=======
+  it 'classes also have methods' do
+    expect(Cat.methods.size > __).to be true
+>>>>>>> upstream/main
   end
 
   it 'is possible to define a method on an individual object' do
+    # NB: Do not do this, a single instance should not be unique in terms of behaviour!
     percy = Cat.new
     def percy.wag
       :percys_wag
