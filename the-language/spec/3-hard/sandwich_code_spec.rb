@@ -93,9 +93,15 @@ RSpec.describe 'sandwich code' do
   end
 
   it 'supports passing a block to open' do
+<<<<<<< HEAD
 
     # So this shows that the sandwhich methodology exists in ruby and is quite common
     # This is one of the powerful attributes of blocks
     expect(count_lines3(EXAMPLE_FILE)).to eq(4)
+=======
+    # So this shows that the sandwich methodology exists in ruby and is quite common
+    # This is one of the strong(er), use-cases of blocks
+    expect(count_lines3(EXAMPLE_FILE)).to eq(__)
+>>>>>>> upstream/main
   end
 end

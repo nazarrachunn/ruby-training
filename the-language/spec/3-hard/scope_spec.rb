@@ -1,4 +1,4 @@
-# Notice that we have define everything inside a Scopes module
+# Notice that we have defined EVERYTHING inside the Scopes module!
 module Scopes
   RSpec.describe 'scopes' do
     module Jim
@@ -50,8 +50,13 @@ module Scopes
 
     PI = 3.1416
 
+<<<<<<< HEAD
     it 'defines constants with an upper case first letter' do
       expect(PI).to eq(3.1416)
+=======
+    it 'is common to define a constant with an upper case first letter' do
+      expect(PI).to eq(__)
+>>>>>>> upstream/main
     end
 
     MyString = ::String
