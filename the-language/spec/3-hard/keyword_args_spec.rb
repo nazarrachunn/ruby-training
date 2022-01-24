@@ -19,11 +19,6 @@ RSpec.describe 'keyword args' do
   end
 
   it 'is possible to define a method with regular and keyword arguments' do
-<<<<<<< HEAD
-    expect { method_with_keyword_arguments_including_mandatory }
-      .to raise_error(ArgumentError, /wrong number of arguments/)
-=======
     expect { method_with_keyword_arguments_and_regular_arguments }.to raise_error(__, /__/)
->>>>>>> upstream/main
   end
 end

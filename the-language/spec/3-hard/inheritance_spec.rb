@@ -21,13 +21,8 @@ RSpec.describe 'inheritance' do
     end
   end
 
-<<<<<<< HEAD
-  it 'sets the subclass parent as an ancestor' do
-    expect(Chihuahua.ancestors.include?(OtherDog)).to eq(true)
-=======
   it 'sets the subclasses parent as one of the ancestors' do
     expect(Chihuahua.ancestors.include?(OtherDog)).to eq(__)
->>>>>>> upstream/main
   end
 
   it 'will ultimately inherit from Object' do
